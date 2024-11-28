@@ -3,23 +3,16 @@
 
 # In[ ]:
 
-#pip install llama_index
-#pip install llama_index.embeddings.openai
-#pip install llama_index.llms.openai
-
-
 import streamlit as st
 from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, get_response_synthesizer
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.llms.openai import OpenAI
 import os
 
-# Set up OpenAI API Key (Replace with your own key or use a .env file)
-os.environ['OPENAI_API_KEY'] = "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"
 
 # Initialize LLM and Embedding Models
 embed_model = OpenAIEmbedding(model="text-embedding-3-small")
-llm = OpenAI(model="gpt-4o")  # Replace with the appropriate model
+llm = OpenAI(model="gpt-3.5-turbo")  # Replace with the appropriate model
 
 # Streamlit Web App
 st.set_page_config(page_title="CH Support Chatbot", layout="wide")
