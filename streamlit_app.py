@@ -3,6 +3,10 @@
 
 # In[ ]:
 
+pip install llama_index.core
+pip install llama_index.embeddings.openai
+pip install llama_index.llms.openai
+
 
 import streamlit as st
 from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, get_response_synthesizer
