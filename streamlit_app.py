@@ -3,9 +3,9 @@
 
 # In[ ]:
 
-pip install llama_index.core
-pip install llama_index.embeddings.openai
-pip install llama_index.llms.openai
+pip install llama_index
+#pip install llama_index.embeddings.openai
+#pip install llama_index.llms.openai
 
 
 import streamlit as st
