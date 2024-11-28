@@ -3,7 +3,7 @@
 
 # In[ ]:
 
-pip install llama_index
+#pip install llama_index
 #pip install llama_index.embeddings.openai
 #pip install llama_index.llms.openai
 
