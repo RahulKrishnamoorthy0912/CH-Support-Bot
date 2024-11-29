@@ -2,4 +2,3 @@ streamlit
 llama-index
 python-dotenv
 openai
-llama_index.storage
