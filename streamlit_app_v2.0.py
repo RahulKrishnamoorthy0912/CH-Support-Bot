@@ -32,10 +32,12 @@ st.markdown("Ask your support-related queries and get instant answers!")
 @st.cache_resource
 def load_index():
     try:
-        index = VectorStoreIndex.load_from_disk("E:\CricHeroes\1. Data Science\AI Support Chatbot\support_index.json")
+        persist_dir = "E:\CricHeroes\1. Data Science\AI Support Chatbot\support_index.json"  # Directory where index is saved
+        storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
+        index = load_index_from_storage(storage_context)
         return index
-    except FileNotFoundError:
-        st.error("Index file not found. Please ensure the index is prebuilt and located in the same directory.")
+    except Exception as e:
+        st.error(f"Error loading index: {e}")
         return None
 
 index = load_index()
