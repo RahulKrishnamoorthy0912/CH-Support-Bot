@@ -6,7 +6,7 @@
 
 import os
 import streamlit as st
-from llama_index import VectorStoreIndex
+from llama_index.core import VectorStoreIndex
 #from llama_index import load_index_from_storage
 #from llama_index.storage.storage_context import StorageContext
 
