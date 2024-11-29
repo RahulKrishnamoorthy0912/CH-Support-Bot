@@ -34,7 +34,7 @@ st.markdown("Ask your support-related queries and get instant answers!")
 @st.cache_resource
 def load_index():
     try:
-        persist_dir = "E:/CricHeroes/1. Data Science/AI Support Chatbot/support_index.json"  # Directory where index is saved
+        persist_dir = "/mount/src/ch-support-bot"  # Directory where index is saved
         storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
         index = load_index_from_storage(storage_context)
         #index = VectorStoreIndex.load_from_disk(persist_dir)
