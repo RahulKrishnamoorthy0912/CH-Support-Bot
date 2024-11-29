@@ -7,7 +7,7 @@
 import os
 import streamlit as st
 from llama_index.core import VectorStoreIndex
-#from llama_index import load_index_from_storage
+from llama_index import load_index_from_storage,StorageContext
 #from llama_index.storage.storage_context import StorageContext
 
 
@@ -35,9 +35,9 @@ st.markdown("Ask your support-related queries and get instant answers!")
 def load_index():
     try:
         persist_dir = "E:\CricHeroes\1. Data Science\AI Support Chatbot\support_index.json"  # Directory where index is saved
-        #storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
-        #index = VectorStoreIndex.from_storage(storage_context)
-        index = VectorStoreIndex.load_from_disk(persist_dir)
+        storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
+        index = load_index_from_storage(storage_context)
+        #index = VectorStoreIndex.load_from_disk(persist_dir)
         return index
     except Exception as e:
         st.error(f"Error loading index: {e}")
